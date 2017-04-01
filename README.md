@@ -3,7 +3,7 @@
 
 Destination : 
 
-content of this github needs to be placed in  (including folders)
+content of this github needs to be placed in
 
 	/usr/bin
 
