@@ -47,7 +47,7 @@ fi
 
 menuStart
 menuSeparator 'Online Help'
-menuSeparator
+
 menuItem 'ARCHLabs Forum Homepage' 'chromium "http://archlabs.prophpbb.com/"'
 menuItem 'Forum Basic Help & Support' 'chromium "http://archlabs.prophpbb.com/forum7.html"'
 menuItem 'Scripts, Tutorials & Tips' 'chromium "https://bbs.archlinux.org/viewforum.php?id=33"'
