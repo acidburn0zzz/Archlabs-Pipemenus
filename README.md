@@ -18,5 +18,5 @@ All need to be made executable to work.
 
 	chmod u+x al*
 
-
+Also **cleanup.sh** to clean up stuff after installation like liveuser. Do not delete.
 
