@@ -16,4 +16,7 @@ excluding
 
 All need to be made executable to work.
 
+	chmod u+x al*
+
+
 
