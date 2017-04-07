@@ -99,7 +99,6 @@ menuSubmenuEnd
 menuSeparator 'man pages'
 menuItem 'Compositor' 'urxvt -T "Compositor man page" -e man compton'
 menuItem 'dmenu' 'urxvt -T "dmenu man page" -e man dmenu'
-menuItem 'gmrun' 'urxvt -T "gmrun man page" -e man gmrun'
 menuItem 'xrandr' 'urxvt -T "xrandr man page" -e man xrandr'
 
 
