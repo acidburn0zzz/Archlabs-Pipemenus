@@ -46,7 +46,7 @@ if ! . "$BL_COMMON_LIBDIR/al-include.cfg" 2> /dev/null; then
 fi
 
 menuStart
-menuSeparator 'ONLINE HELP'
+menuSeparator 'Online Help'
 menuSeparator
 menuItem 'ARCHLabs Forum Homepage' 'exo-open "http://archlabs.prophpbb.com/"'
 menuItem 'Forum Basic Help & Support' 'exo-open "http://archlabs.prophpbb.com/forum7.html"'
@@ -96,7 +96,7 @@ menuItem 'UnixPorn' 'exo-open "https://www.reddit.com/r/unixporn/"'
 menuItem 'nixers.net' 'exo-open "http://nixers.net/"'
 menuSubmenuEnd
 
-menuSeparator 'MAN PAGES'
+menuSeparator 'Man Pages'
 menuItem 'Compositor' 'urxvt -T "Compositor man page" -e man compton'
 menuItem 'Dmenu' 'urxvt -T "dmenu man page" -e man dmenu'
 menuItem 'Gmrun' 'urxvt -T "gmrun man page" -e man gmrun'
