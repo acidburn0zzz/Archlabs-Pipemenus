@@ -54,10 +54,6 @@ menuItem 'Scripts, Tutorials & Tips' 'exo-open "https://bbs.archlinux.org/viewfo
 
 menuSeparator
 
-menuItem 'Arch Wiki' 'exo-open "https://wiki.archlinux.org/index.php/Table_of_contents"'
-
-menuSeparator
-
 menuSubmenu 'OpenboxWWW' 'Openbox'
 menuSubmenu 'ObWWW' 'Openbox Website'
 menuItem 'Openbox Homepage' 'exo-open "http://openbox.org/"'
@@ -103,7 +99,9 @@ menuItem 'Gmrun' 'urxvt -T "gmrun man page" -e man gmrun'
 menuItem 'Xrandr' 'urxvt -T "xrandr man page" -e man xrandr'
 
 menuSeparator 'Wikis'
+menuItem 'Arch Wiki' 'exo-open "https://wiki.archlinux.org/index.php/Table_of_contents"'
 menuItem 'Termite' 'exo-open "https://wiki.archlinux.org/index.php/termite/"'
+menuItem 'Audtool' 'exo-open "https://wiki.archlinux.org/index.php/audacious#Audtool/"'
 
 menuEnd
 
