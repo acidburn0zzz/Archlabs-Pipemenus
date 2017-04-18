@@ -102,6 +102,8 @@ menuItem 'Dmenu' 'urxvt -T "dmenu man page" -e man dmenu'
 menuItem 'Gmrun' 'urxvt -T "gmrun man page" -e man gmrun'
 menuItem 'Xrandr' 'urxvt -T "xrandr man page" -e man xrandr'
 
+menuSeparator 'Wikis'
+menuItem 'Termite' 'exo-open "https://wiki.archlinux.org/index.php/termite'
 
 menuEnd
 
