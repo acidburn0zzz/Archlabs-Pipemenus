@@ -3,6 +3,7 @@ rm -f /etc/sudoers.d/g_wheel
 rm -R /etc/systemd/system/getty@tty1.service.d
 rm /etc/systemd/system/default.target
 rm /usr/share/applications/calamares.desktop
+rm /etc/skel/.config/autostart/calamares.desktop
 rm -rf /etc/calamares
 rm -rf /usr/lib/calamares
 rm -rf /abif-master
