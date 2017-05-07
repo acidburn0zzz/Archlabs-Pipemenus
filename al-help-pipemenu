@@ -1,6 +1,7 @@
 #!/bin/bash
 #    al-help-pipemenu - an Openbox pipemenu for displaying help files
 #    Copyright (C) 2015 damo    <damo@bunsenlabs.org>
+#    Borrowed with love by the ArchLabs Boys.
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
