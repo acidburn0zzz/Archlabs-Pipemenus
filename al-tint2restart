@@ -3,6 +3,7 @@
 #    al-tint2restart: a script to restart all tint2 instances
 #    Copyright (C) 2015 damo    <damo@bunsenlabs.org>
 #    Copyright (C) 2015-2016  John Crawley <john@bunsenlabs.org>
+#    Borrowed with love by the ArchLabs boys.
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
