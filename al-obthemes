@@ -3,6 +3,8 @@
 #    al-obthemes: script to save or restore openbox gui configurations
 #    Copyright (C) 2015 damo    <damo@bunsenlabs.org>
 #
+#    Borrowed with love by the ArchLabs boys.
+#
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
 #    the Free Software Foundation, either version 3 of the License, or
@@ -27,7 +29,7 @@
 #                       Lightdm login gtk greeter
 #                       Exit dialog theme
 #                       X configs (.bashrc, .Xresources)
-#                       Terminator config
+#                       Termite config
 #                       Exit dialogue
 #
 # Paths are assumed to be ARCHLabs defaults
@@ -78,7 +80,7 @@ No other options are supported.
                        Lightdm login gtk greeter
                        Exit dialog theme
                        X configs (.bashrc, .Xresources)
-                       Terminator config
+                       Termite config
 
  Paths are assumed to be ARCHLabs defaults.
 
@@ -123,7 +125,7 @@ do
 done
 
 #### VARIABLES #########################################################
-CONFIGPATH="$HOME/.config/blob"
+CONFIGPATH="$HOME/.config/alob"
 SETTINGS=""
 OBPATH="$HOME/.config/openbox"
 CURSESSION="$CONFIGPATH/current"
@@ -136,7 +138,7 @@ CONKYCMD=""
 COLS=0
 ### CONFIGS VARIABLES
 EXITFILE="$HOME/.config/al-exit/al-exitrc"
-TERMDIR="$HOME/.config/terminator"
+TERMDIR="$HOME/.config/termite"
 TERMFILE="$TERMDIR/config"
 FEHFILE="$HOME/.fehbg"
 NITRODIR="$HOME/.config/nitrogen"
@@ -162,7 +164,7 @@ PICKBG="Background Wallpaper"
 PICKDMENU="dmenu (Alt menu)"
 PICKLDM="Lightdm Login theme"
 PICKEXIT="Exit dialog theme"
-PICKTERM="Terminator"
+PICKTERM="Termite"
 PICKX="X configs"
 ### END CONFIGS VARIABLES
 
@@ -175,8 +177,7 @@ OK="--button=OK:0"
 CANCEL="--button=gtk-cancel:1"
 EXIT="--button=gtk-quit:1"
 CLOSE="--button=gtk-close:1"
-TXTINTRO='<big><b>ARCHLabs
-Openbox Configuration Manager</b></big>
+TXTINTRO='<big><b>ARCHLabs Openbox Configuration Manager</b></big>
 
 
 <b>Save or Restore settings for:</b>
@@ -190,12 +191,12 @@ Openbox Configuration Manager</b></big>
     LightDM theme
     Exit dialog theme
     X configs (.bashrc, .Xresources)
-    Terminator (if default term)
+    Termite (if default term)
     + Screenshot'
 ### END DIALOG VARIABLES
 
 ### USER SETTINGS
-IMGCMD="al-image-viewer"    # application command to view screenshot
+IMGCMD="gpicview"    # application command to view screenshot
 MENUMODIFIER="super+space"  # keybind for show root-menu
 MOUSECMD="click 3"          # mouse r-click
 KEYDOWN=13           # adjust this for where "Preferences" is in the menu
@@ -206,7 +207,7 @@ KEYDOWN=13           # adjust this for where "Preferences" is in the menu
 function Intro(){
     local INTRO RET
     getSet
-    #  If blob/ is empty, then don't display "View Saved" option in Intro dialog
+    #  If alob/ is empty, then don't display "View Saved" option in Intro dialog
     if (( NUMDIRS > 0 ));then
         INTRO=$($DIALOGDEC "$T$TXTINTRO" \
         --title="$TITLE" \
@@ -416,7 +417,7 @@ function getConky(){
     CONKYCMD=""
     LISTMSGTXT=""
     TXT=""
-    CONKYTEMP=$(mktemp --tmpdir blob.XXXX)
+    CONKYTEMP=$(mktemp --tmpdir alob.XXXX)
     if [[ $(pidof conky) ]];then    # get full command of running conkys
         > "$CONKYTEMP"
         pgrep -a conky | while read pid CMD;do
@@ -457,7 +458,7 @@ function checkConkyzen(){    # see if al-conkyzen and session file present
 }
 
 function getTint(){
-    TEMPTINT=$(mktemp --tmpdir blob.XXXX) # make blank tempfile, to save running tint2 paths
+    TEMPTINT=$(mktemp --tmpdir alob.XXXX) # make blank tempfile, to save running tint2 paths
     if [[ $(pidof tint2) ]];then
         pgrep -a tint2 | while read pid cmd;do
             if [[ ${cmd%% *} = tint2 ]];then
@@ -571,12 +572,12 @@ function getLightdm(){
     fi
 }
 
-function getTerminator(){
+function getTermite(){
     if [[ -e $TERMFILE ]];then
         cp "$TERMFILE" "$CONFIGDIR"
-        TXT="Terminator config:  $TERMFILE\n"
+        TXT="Termite config:  $TERMFILE\n"
         echo -e "\n  Saved $TXT"
-        echo "[TERMINATOR]" >> "$SETTINGS"
+        echo "[Termite]" >> "$SETTINGS"
         echo "$TXT" >> "$LISTMSG"
     fi
 }
@@ -611,7 +612,7 @@ function getBLexitrc(){
 function checkTint2(){   # kill or restart tint2s for screenshot, if necessary
     if [[ $1 = stop ]];then
         if ! cat "$SETTINGS" | grep "TINT2" &>/dev/null;then
-            tmpTINT=$(mktemp --tmpdir blob.XXXX) # make blank tempfile, to save running tint2 paths
+            tmpTINT=$(mktemp --tmpdir alob.XXXX) # make blank tempfile, to save running tint2 paths
             if [[ $(pidof tint2) ]];then
                 pgrep -a tint2 | while read pid cmd;do
                     if [[ ${cmd%% *} = tint2 ]];then
@@ -635,7 +636,7 @@ function checkTint2(){   # kill or restart tint2s for screenshot, if necessary
 
 function getScrot(){
     pid=""
-    TMPSCROT=$(mktemp --tmpdir blob.XXXX)
+    TMPSCROT=$(mktemp --tmpdir alob.XXXX)
     SCROT="$CONFIGPATH/$ANS"
     CURRDTOP=$(xprop -root _NET_CURRENT_DESKTOP | tail -c -2) # desktop number
     MONS=$(xrandr -q | grep -c " connected")    # number of monitors
@@ -735,14 +736,14 @@ function restoreGTK(){   # $1 is chosen saved config dir
 function restoreOBrc(){
     RCFILE="$OBPATH/rc.xml"
     THEMEFILE="$1/obtheme.txt"
-    FTEMP=$(mktemp --tmpdir blob.XXXX)
+    FTEMP=$(mktemp --tmpdir alob.XXXX)
     if [[ $(grep "[OBTHEME]" "$1/settings.cfg" ) ]] &>/dev/null;then
         # backup rc.xml first
         NOW=$(date +"%Y%m%d-%H%M%S")
-        RCBKP="$RCFILE.blob.$NOW"
+        RCBKP="$RCFILE.alob.$NOW"
         cp "$RCFILE" "$RCBKP"
         # remove older backups
-        for f in $(find "$OBPATH" -type f|grep .blob. );do
+        for f in $(find "$OBPATH" -type f|grep .alob. );do
             if [[ $f -ot $RCBKP ]];then
                 rm "$f"
             fi
@@ -835,9 +836,9 @@ function restoreXsettings(){
     done
 }
 
-function restoreTerminator(){
+function restoreTermite(){
     TFILE="$1"
-    if [[ -e $TERMDIR ]];then        # backup terminator/config first
+    if [[ -e $TERMDIR ]];then        # backup Termite/config first
         TERMBKP="$TERMDIR/config.bkp"
         cp "$TFILE" "$TERMBKP"
         cp "$TFILE" "$TERMDIR/config"
@@ -872,7 +873,7 @@ function cleanup(){
             mv "$CONFIGDIR-BKP" "$CONFIGDIR"
             echo -e "\n  Cancelled\n..Temporary $CONFIGDIR restored\n"
         fi
-        rm -f /tmp/blob.*
+        rm -f /tmp/alob.*
     elif [[ $1 = save ]];then
         saveSettings
     fi
@@ -896,8 +897,8 @@ function saveSettings(){
         $SELECT "$PICKEXIT" \
         $SELECT "$PICKX" \
         )
-    # add terminator to array if set as default
-    if  readlink -f /usr/bin/x-terminal-emulator | grep terminator &>/dev/null;then
+    # add Termite to array if set as default
+    if  readlink -f /usr/bin/x-terminal-emulator | grep Termite &>/dev/null;then
         COLUMNS=("${COLUMNS[@]}" $SELECT "$PICKTERM")
     fi
 
@@ -963,7 +964,7 @@ function saveSettings(){
                                         ;;
                         "$PICKEXIT" )   getBLexitrc
                                         ;;
-                        "$PICKTERM" )   getTerminator
+                        "$PICKTERM" )   getTermite
                                         ;;
                         "$PICKX"    )   getXconfig
                                         ;;
@@ -992,7 +993,7 @@ function saveSettings(){
 }
 
 function ViewRestoreDialog(){  #   Display saved theme collections
-    getSet          # get name of latest set BLOB config
+    getSet          # get name of latest set alob config
     if (( NUMDIRS == 0 ));then   # no saved configs; go back to Intro dialog
         Intro
     fi
@@ -1177,7 +1178,7 @@ function restoreSettings(){
                                 ;;
             "[XFILES]"      )   restoreXsettings "$FPATH/.bashrc" "$FPATH/.Xresources"
                                 ;;
-            "[TERMINATOR]"  )   restoreTerminator "$FPATH/config"
+            "[Termite]"  )   restoreTermite "$FPATH/config"
                                 ;;
             *               )   echo -e "  Unknown value!" 2>&1
                                 restoreSettings
@@ -1189,7 +1190,7 @@ function restoreSettings(){
 }
 
 ### END FUNCTIONS ######################################################
-# test for blobthemes config directory, create if it doesn't exist
+# test for alobthemes config directory, create if it doesn't exist
 mkdir -p "$CONFIGPATH"
 # create file to hold most recent saved configuration name
 if [[ ! -f $CURSESSION ]] &>/dev/null;then
