@@ -1,7 +1,8 @@
 #!/bin/sh
-#    cb-recent-files-pipemenu - a script to parse .recently-used.xbel
+#    al-recent-files-pipemenu - a script to parse .recently-used.xbel
 #    and generate openbox pipe menu
 #    Copyright (C) 2010  John Crawley
+#    Borrowed with love by the ArchLabs boys.
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -16,6 +17,8 @@
 
 # Ported to #!++ <https://crunchbangplusplus.org>
 # by Ben Young <computermouth@crunchbangplusplus.org>
+# Ported to ArchLabs Linux <https://archlabsblog.wordpress.com/> February 2017
+# Matthew Dobson <mattdobson2001@gmail.com>
 
 # Usage: add
 # <menu id="recent" label="Recent Files" execute="/path/to/cbpp-recent-files-pipemenu" />
