@@ -103,6 +103,7 @@ menuSeparator 'Man Pages'
 menuItem 'Compositor' 'urxvt -T "Compositor man page" -e man compton'
 menuItem 'Dmenu' 'urxvt -T "dmenu man page" -e man dmenu'
 menuItem 'Xrandr' 'urxvt -T "xrandr man page" -e man xrandr'
+menuItem 'Yad' 'urxvt -T "yad man page" -e man yad'
 
 menuSeparator 'Wikis'
 menuItem 'Arch Wiki' 'exo-open "https://wiki.archlinux.org/index.php/Table_of_contents"'
