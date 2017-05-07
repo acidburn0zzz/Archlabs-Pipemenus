@@ -46,9 +46,16 @@ if ! . "$BL_COMMON_LIBDIR/al-include.cfg" 2> /dev/null; then
 fi
 
 menuStart
-menuSeparator 'Online Help'
+menuSeparator 'ArchLabs Linux Online'
 menuSeparator
-menuItem 'ARCHLabs Forum Homepage' 'exo-open "http://archlabs.prophpbb.com/"'
+menuItem 'ArchLabs Homepage' 'exo-open "https://archlabsblog.wordpress.com/"'
+menuItem 'ArchLabs Reddit' 'exo-open "https://www.reddit.com/r/ArchLabsLinux/"'
+menuItem 'ArchLabs Medium' 'exo-open "https://medium.com/@archlabslinux"'
+menuItem 'ArchLabs Forum' 'exo-open "http://archlabs.prophpbb.com/"'
+menuItem 'ArchLabs Google+' 'exo-open "https://plus.google.com/u/0/communities/111177505820810068511"'
+
+menuSeparator 'ArchLabs Linux Help'
+menuSeparator
 menuItem 'Forum Basic Help & Support' 'exo-open "http://archlabs.prophpbb.com/forum7.html"'
 menuItem 'Scripts, Tutorials & Tips' 'exo-open "https://bbs.archlinux.org/viewforum.php?id=33"'
 
