@@ -58,7 +58,7 @@ fi
 SCROTSDIR="$IMGDIR/screenshots"
 mkdir -p "$SCROTSDIR"
 
-if ! . "$BL_COMMON_LIBDIR/bl-include.cfg" 2> /dev/null; then
+if ! . "$BL_COMMON_LIBDIR/al-include.cfg" 2> /dev/null; then
     echo $"Error: Failed to source bl-include.cfg in $BL_COMMON_LIBDIR" >&2
     exit 1
 elif ! . "$USR_CFG_DIR/pipemenus.rc" 2> /dev/null; then
