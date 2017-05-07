@@ -1,5 +1,5 @@
 #!/bin/bash
-#    bl-graphics-pipemenu - an Openbox pipemenu for Graphics applications
+#    al-graphics-pipemenu - an Openbox pipemenu for Graphics applications
 #    Copyright (C) 2012 Philip Newborough   <corenominal@corenominal.org>
 #    Copyright (C) 2015-2016 damo    <damo@bunsenlabs.org>
 #    Copyright (C) 2015-2016 John Crawley    <john@bunsenlabs.org>
@@ -20,7 +20,7 @@
 #   To change the entries shown in the Graphics pipemenu:
 #   edit ".config/openbox/pipemenus.rc"
 
-HELP='    bl-graphics-pipemenu an Openbox Pipe Menu for graphics applications
+HELP='    al-graphics-pipemenu an Openbox Pipe Menu for graphics applications
     It should normally be called from an openbox menu.
 
 Options (usually passed from the menu):
@@ -28,7 +28,7 @@ Options (usually passed from the menu):
     --install   install a graphics-related package
     (the package must be in the list defined in the pipemenu config file)
 
-    If bl-graphics-pipemenu is called with no options (the usual method),
+    If al-graphics-pipemenu is called with no options (the usual method),
     it will output an xml openbox pipemenu
     for launching and installing graphics applications.
 
@@ -45,7 +45,7 @@ do
     esac
 done
 
-BL_COMMON_LIBDIR='/usr/lib/bunsen/common'
+BL_COMMON_LIBDIR='/usr/lib/archlabs/common'
 USR_CFG_DIR="$HOME/.config/openbox"
 
 # Get $USER images directory
