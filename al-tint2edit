@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#    al-tintedit: a ARCHLabs tint2 config file editor
+#    al-tintedit: a ArchLabs tint2 config file editor
 #    Copyright (C) 2015 damo    <damo@bunsenlabs.org>
 #    Borrowed with love by the ArchLabs boys.
 #
@@ -42,7 +42,7 @@ Multiple tint2s can be chosen.
 
 ### DIALOG VARIABLES
 DLGDEC="yad --center  --borders=20 --width=400 --height=400 "
-TITLE="ARCHLabs Tint2 Edit"
+TITLE="ArchLabs Tint2 Edit"
 WINICON="--window-icon=distributor-logo-archlabs"
 OK="--button=OK:0"
 CANCEL="--button=gtk-cancel:1"

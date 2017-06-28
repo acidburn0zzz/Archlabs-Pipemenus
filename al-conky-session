@@ -28,7 +28,7 @@ USAGE="\vUSAGE:\tal-conky-session [OPTION(S)]...FILES
 
 ### DIALOG VARIABLES
 DLG="yad --center --undecorated --borders=20 "
-TITLE="ARCHLabs Conky Session"
+TITLE="ArchLabs Conky Session"
 WINICON="--window-icon=distributor-logo-bunsenlabs"
 OK="--button=OK:0"
 CANCEL="--button=gtk-cancel:1"

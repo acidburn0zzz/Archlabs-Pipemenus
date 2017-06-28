@@ -32,7 +32,7 @@
 #                       Termite config
 #                       Exit dialogue
 #
-# Paths are assumed to be ARCHLabs defaults
+# Paths are assumed to be ArchLabs defaults
 #
 # A Screenshot is saved (Windows are hidden briefly so the image
 #                        is the bare desktop, with any Tint2s
@@ -62,7 +62,7 @@
 # so the screenshot may produce an incorrect theme displayed and/or poor positioning.
 # A workaround is to move the cursor to some free space, and use the "Enter" key in the
 # "Configurations to be saved:" dialog.
-#	Renamed for use with ARCHLabs
+#	Renamed for use with ArchLabs
 
 HELP='al-obthemes a script to save or restore openbox gui configurations
 Options:
@@ -82,7 +82,7 @@ No other options are supported.
                        X configs (.bashrc, .Xresources)
                        Termite config
 
- Paths are assumed to be ARCHLabs defaults.
+ Paths are assumed to be ArchLabs defaults.
 
  A Screenshot is saved (Windows are hidden briefly so the image
                         is the bare desktop, with any Tint2s
@@ -177,7 +177,7 @@ OK="--button=OK:0"
 CANCEL="--button=gtk-cancel:1"
 EXIT="--button=gtk-quit:1"
 CLOSE="--button=gtk-close:1"
-TXTINTRO='<big><b>ARCHLabs Openbox Configuration Manager</b></big>
+TXTINTRO='<big><b>ArchLabs Openbox Configuration Manager</b></big>
 
 
 <b>Save or Restore settings for:</b>

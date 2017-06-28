@@ -1,8 +1,8 @@
 #!/bin/bash
 #
 #   Borrowed with Love from the Bunsen Lab boys.
-#	ARCHLabs Conky selection and switcher script
-#	Renamed for ARCHLabs
+#	ArchLabs Conky selection and switcher script
+#	Renamed for ArchLabs
 #   
 #	Written by damo <damo@bunsenlabs.org> for BunsenLabs Linux, April 2015
 #   Beta tested and stamped "zen" by <Sector11>
@@ -63,7 +63,7 @@ USAGE2="\v\tUSAGE:\tal-conkyzen [OPTION]...FILES
 ### DIALOG VARIABLES
 DLG="yad --center --undecorated --borders=20 "
 DLGDEC="yad --center  --borders=20 "
-TITLE="ARCHLabs Conky Manager"
+TITLE="ArchLabs Conky Manager"
 WINICON="--window-icon=distributor-logo-archlabs"
 OK="--button=OK:0"
 CANCEL="--button=gtk-cancel:1"

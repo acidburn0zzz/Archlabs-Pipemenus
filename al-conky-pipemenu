@@ -137,7 +137,7 @@ getConkys(){
 
 checkHelpfile(){
     DLG="yad --text-info --center --borders=20 \
-    --title='ARCHLabs Conky Manager Help' \
+    --title='ArchLabs Conky Manager Help' \
     --window-icon=distributor-logo-bunsenlabs \
     --filename=$HELPFILE --fontname=Monospace \
     --width=650 --height=700 \

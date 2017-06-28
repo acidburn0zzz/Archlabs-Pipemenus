@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-#    al-tint2zen: a ARCHLabs tint2 selection and switcher script
+#    al-tint2zen: a ArchLabs tint2 selection and switcher script
 #    Copyright (C) 2015 damo    <damo@bunsenlabs.org>
 #    Borrowed with love by the ArchLabs boys
 #
@@ -46,7 +46,7 @@ USAGE="\v\tUSAGE:\n\tWith no command argument, the script uses the chosen
 
 ### DIALOG VARIABLES
 DLGDEC="yad --center --borders=20 "
-TITLE="ARCHLabs Tint2 Manager"
+TITLE="ArchLabs Tint2 Manager"
 WINICON="--window-icon=distributor-logo-archlabs"
 OK="--button=OK:0"
 CANCEL="--button=gtk-cancel:1"

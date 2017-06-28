@@ -20,7 +20,7 @@
 
 # al-kb is used to parse rc.xml and send the output to a textfile
 
-#	Renamed for ARCHLabs
+#	Renamed for ArchLabs
 
 HELP='    al-kb-pipemenu an Openbox Pipe Menu for displaying keybinds
     It should normally be called from an openbox menu.
@@ -63,7 +63,7 @@ fi
 # test if al-kb exists in path
 if ! type "$KBSCRIPT" &> /dev/null;then
     menuStart
-    menuSeparator "$KBSCRIPT is not available. Try installing ARCHLabs-utilities."
+    menuSeparator "$KBSCRIPT is not available. Try installing ArchLabs-utilities."
     menuEnd
     exit 1
 fi
