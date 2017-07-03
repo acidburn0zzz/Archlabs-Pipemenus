@@ -16,7 +16,7 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-#	Renamed for ARCHLabs
+#	Renamed for Archlabs
 
 HELP='    al-help-pipemenu an Openbox Pipe Menu for displaying help files
     It should normally be called from an openbox menu.
@@ -39,10 +39,10 @@ do
     esac
 done
 
-BL_COMMON_LIBDIR='/usr/lib/archlabs/common'
+AL_COMMON_LIBDIR='/usr/lib/archlabs/common'
 
-if ! . "$BL_COMMON_LIBDIR/al-include.cfg" 2> /dev/null; then
-    echo $"Error: Failed to source al-include.cfg in $BL_COMMON_LIBDIR" >&2
+if ! . "$AL_COMMON_LIBDIR/al-include.cfg" 2> /dev/null; then
+    echo $"Error: Failed to source al-include.cfg in $AL_COMMON_LIBDIR" >&2
     exit 1
 fi
 
