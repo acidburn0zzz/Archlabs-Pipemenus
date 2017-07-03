@@ -38,7 +38,7 @@ do
     esac
 done
 
-BL_COMMON_LIBDIR='/usr/lib/archlabs/common'
+AL_COMMON_LIBDIR='/usr/lib/archlabs/common'
 
 CONKYDEFAULT="$HOME/.conkyrc"
 CONKYPATH="$HOME/.config/conky"
@@ -48,8 +48,8 @@ CZEN="al-conkyzen"
 CSESSION="al-conky-session"
 HELPFILE="/usr/share/archlabs/docs/helpfile-conkyzen.txt"
 
-if ! . "$BL_COMMON_LIBDIR/al-include.cfg" 2> /dev/null; then
-    echo "Error: Failed to source al-include.cfg in $BL_COMMON_LIBDIR" >&2
+if ! . "$AL_COMMON_LIBDIR/al-include.cfg" 2> /dev/null; then
+    echo "Error: Failed to source al-include.cfg in $AL_COMMON_LIBDIR" >&2
     exit 1
 fi
 if [ ! -e "$CSESSIONFILE" ] 2> /dev/null ; then
@@ -138,7 +138,6 @@ getConkys(){
 checkHelpfile(){
     DLG="yad --text-info --center --borders=20 \
     --title='ArchLabs Conky Manager Help' \
-    --window-icon=distributor-logo-bunsenlabs \
     --filename=$HELPFILE --fontname=Monospace \
     --width=650 --height=700 \
     --button=OK:0"
