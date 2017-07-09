@@ -20,5 +20,5 @@ if [ -f "$menuold" ]
         obmenu-generator -s -c
         notify-send 'Success!' 'A new menu was generated.'
     else
-        notify-send 'Ooops!' 'It seems a backup was never made or is missing, nothing changed.'
+        notify-send 'Ooops!' 'A backup was never made & is required.. Nothing changed.'
 fi
