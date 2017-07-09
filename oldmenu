@@ -4,7 +4,8 @@
 set -e
 
 ## Declaring some variables
-menuold="$HOME/.config/openbox/menu-static.xml"
+config="$HOME/.config/openbox"
+menuold="$config/menu-static.xml"
 
 
 ## Revert to Backup menu

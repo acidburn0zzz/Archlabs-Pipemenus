@@ -1,17 +1,16 @@
 #!/bin/bash
 
+# drop ot on error
+set -e
+
 ## Declaring some variables
 config="$HOME/.config/openbox"
-menunow="$config/.config/openbox/menu.xml"
 menuold="$config/menu-static.xml"
 
 
 ## Will backup current static menu.xml to menu-static.xml
 
-if [ -f "$menunow" ]
-    then
-        cp $HOME/.config/openbox/menu.xml $HOME/.config/openbox/menu-static.xml
-fi
+cp $HOME/.config/openbox/menu.xml $HOME/.config/openbox/menu-static.xml
 
 
 ## Setup New Menu
