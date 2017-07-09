@@ -1,0 +1,25 @@
+#!/bin/bash
+
+## Declaring some variables
+config="$HOME/.config/openbox"
+menunow="$config/.config/openbox/menu.xml"
+menuold="$config/menu-static.xml"
+
+
+## Will backup current static menu.xml to menu-static.xml
+
+if [ -f "$menunow" ]
+    then
+        cp $HOME/.config/openbox/menu.xml $HOME/.config/openbox/menu-static.xml
+fi
+
+
+## Setup New Menu
+
+if [ -f "$menuold" ]
+    then
+        obmenu-generator -s -c
+        notify-send 'Success!' 'A new menu was generated.'
+    else
+        notify-send 'Ooops!' 'It seems a backup was never made or is missing, nothing changed.'
+fi
